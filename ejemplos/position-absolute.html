@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position Absolute</title>
+    <style>
+        /*
+            ** Las propiedades del modelo de cajas (Box Model) no se heredan.
+            position: 
+                - static (default)
+                - absolute
+                - relative
+                - fixed
+                - inherit
+
+            position: absolute
+            1. Sale del flujo normal de la renderización de la página.
+            2. Si no se especifican coordenas mediante las propiedades right, left, bottom y top
+                el elemento queda ubicado en la parte superior-izquierda de su elemento padre.
+            3. Si se especifican las coordenadas entonces el elemento toma como punto de referencia o
+                como punto de partida el borde del primer elemento padre que esté posicionado (que el valor
+                de la propiedad "position" sea distinta a "static").
+            4. Si se posiciona de manera absoluta un elemento de bloque, ese elemento sigue ocupando el 100%
+                de su elemento contenedor.
+            5. Si se posiciona de manera absoluta un elemento en línea, éste elemento tendrá un comportamiento
+                similar a un elemento "inline-block", es decir, podemos aplicar todas las propiedades del
+                modelo de cajas p.ej. "width" y "height".
+            6. Dado un elemento en línea (inline) posicionado de manera absoluta, es similar el comportamiento
+                en los siguientes ejemplos:
+                    1.
+                        [selector] {
+                            width: 100%;
+                        }
+
+                    2. [selector] {
+                            left: 0;
+                            right: 0;
+                        }
+        */
+        .box-wrapper {
+            background-color: #333;
+            width: 800px;
+            height: 800px;
+        }
+        .box-container {
+            background-color: #999;
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box-1 {
+            background-color: #F00;
+            top: 0;
+            left: 0;
+            display: none;
+            /*
+            visibility: hidden;
+            opacity: 0;
+            */
+        }
+        .box-2 {
+            background-color: #FF0;
+            top: 0;
+            right: 0;
+        }
+        .box-3 {
+            background-color: #F0F;
+            bottom: 0;
+            left: 0;
+        }
+        .box-4 {
+            background-color: #00F;
+            bottom: 0;
+            right: 0;
+        }
+        .box-5 {
+            background-color: #0FF;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+        .box-text {
+            background-color: aquamarine;
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+        .box-link {
+            background-color: #ff9100;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrapper">
+        <div class="box-container">
+            <div class="box box-1"></div>
+            <div class="box box-2"></div>
+            <div class="box box-3"></div>
+            <div class="box box-4"></div>
+            <div class="box box-5"></div>
+            <p class="box-text">Hola Mundo</p>
+            <a href="#" class="box-link">Ir a google</a>
+        </div>
+    </div>
+</body>
+</html>

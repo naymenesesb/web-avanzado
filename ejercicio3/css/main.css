@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
+
+/* System Grid */
+@import url("lib/grid.css");
+
+/* Generals */
+@import url("lib/normalize.css");
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+}
+
+/* Header */
+.page-header{
+    padding: 35px 0;
+    min-height: 300px;
+    background: transparent url("../images/header-bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.page-header:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, .4);
+}
+.page-header h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 8px #333;
+}
+.page-hrader h1,
+.page-header .form,
+
+/* Nav */
+.page-nav{
+    background-color: #969a9c
+}
+
+/* Main */
+.page-main{
+    padding:65px 0px;
+}
+.page-main img{
+    margin-bottom: 25px;
+}
+
+/* Section */
+
+/* Footer */
+.page-footer{
+    background-color: #343a40;
+    padding: 25px 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+
+.page-footer p{
+    margin:0;
+}
+/*Social Media*/
+
+.social-media__item{
+    display: inline-block;
+}
+.social-media__item + .social-media__item{
+    margin-left: 10px;
+}
+
+.social-media__item .fa{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media .fa-facebook:hover{
+    color: #3b5998;
+}
+.social-media .fa-twitter:hover{
+    color: #55acee;
+}
+.social-media .fa-instagram:hover{
+    color: #8a3ab9;
+}
+.social-media .fa-snapchat:hover{
+    color: #fffc00;
+}
+
+
+/*Nes Cards*/
+.card-text{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* Media Queries */
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .page-main img{
+        margin-bottom: 0px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body {
+        background-color: #fff;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    body {
+        background-color: #fff;
+    }
+}
+/* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both;
+}
+.margin-top,
+.mt {
+    margin-top: 65px;
+}
+.margin-bottom,
+.mb {
+    margin-bottom: 65px;
+}
+.margin-vertical,
+.mv {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+.padding-top,
+.pt {
+    padding-top: 65px;
+}
+.padding-bottom,
+.pb {
+    padding-bottom: 65px;
+}
+.padding-vertical,
+.pv {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}

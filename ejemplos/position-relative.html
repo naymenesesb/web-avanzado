@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position RElative</title>
+    <style>
+        /*
+            ** Las propiedades del modelo de cajas (Box Model) no se heredan.
+            position: 
+                - static (default)
+                - absolute
+                - relative
+                - fixed
+                - inherit
+
+            position: relative
+            1. No sale del flujo normal de la renderización de la página.
+            2. Si no se especifican coordenas mediante las propiedades right, left, bottom y top
+                el elemento queda ubicado en el mismo lugar (no se mueve).
+            3. Si se especifican las coordenadas entonces el elemento toma como punto de referencia o
+                como punto de partida su posición original.
+        */
+        .box-wrapper {
+            background-color: #333;
+            width: 800px;
+            height: 800px;
+        }
+        .box-container {
+            background-color: #999;
+            width: 500px;
+            height: 500px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .box-1 {
+            background-color: #F00;
+        }
+        .box-2 {
+            background-color: #FF0;
+        }
+        .box-3 {
+            background-color: #F0F;
+            position: relative;
+            bottom: -50px;
+            right: -50px;
+        }
+        .box-4 {
+            background-color: #00F;
+        }
+        .box-5 {
+            background-color: #0FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrapper">
+        <div class="box-container">
+            <div class="box box-1"></div>
+            <div class="box box-2"></div>
+            <div class="box box-3"></div>
+            <div class="box box-4"></div>
+            <div class="box box-5"></div>
+        </div>
+    </div>
+</body>
+</html>
