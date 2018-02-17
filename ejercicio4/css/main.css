@@ -17,13 +17,102 @@ ul,ol{
 }
 
 /* Header */
+.page-header{
+    background-color: #9a159e;
+    color: #fff;
+    padding: 65px 0px;
+}
 
+.page-header h1{
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
 /* Nav */
-
+.page-nav ul{
+    padding: 10px 0;
+}
+.page-nav li{
+    display: inline-block;
+}
+.page-nav li + li {
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #ccc;
+}
+.page-nav a{
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #666;
+}
+.page-nav a.active,
+.page-nav a:hover{
+    text-decoration: underline;
+    color: #333;
+}
 /* Main */
+.page-main{
+    padding: 65px 0;
+}
 
 /* Section */
+.page-section h2{
+    font-size: 45px;
+    font-weight: 300;
+    color: #666;
+}
+.page-section h2:first-child {
+    margin-top: 0;
+}
+
+/*Table*/
+.table{
+    width: 100%;
+    border: 2px solid transparent;
+    border-top-color: #ccc;
+    border-bottom-color: #ccc; 
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table th,
+.table td{
+    padding: 10px;
+}
+
+.table th{
+    border-bottom: 2px solid #ccc;
+}
+.table td:last-child {
+    text-align: center;
+}
+.table tfoot {
+    font-weight: 700;
+}
+.table .bad{
+    background-color: #f00;
+    color: #fff;
+}
+.table .regular{
+    background-color: #f90;
+    color: #fff;
+}
+.table .good{
+    background-color: #9d0;
+    color: #fff;
+}
 
 /* Footer */
-
+.page-footer{
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+}
+.page-footer p{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
 /* Helpers */
